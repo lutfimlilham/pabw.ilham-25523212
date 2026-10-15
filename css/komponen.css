@@ -1,0 +1,117 @@
+/* Components */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 40rem;
+}
+
+.form-kolom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+label {
+    font-size: var(--text-sm);
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    color: var(--color-fg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border-color: var(--color-danger);
+    border-width: 2px;
+}
+
+button {
+    align-self: flex-start;
+    padding: var(--space-2) var(--space-4);
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.pesan-galat {
+    color: var(--color-danger);
+    font-size: var(--text-sm);
+}
+
+.filter button {
+    color: var(--color-fg);
+    background: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+.filter button.aktif {
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Pesan daftar kosong */
+.pesan-kosong {
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+/* Pengalih tema */
+.pengalih-tema {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.pengalih-tema:focus-visible + .tombol-tema {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.tombol-tema {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    color: var(--color-fg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}

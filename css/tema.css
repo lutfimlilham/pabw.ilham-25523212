@@ -1,0 +1,27 @@
+/* Dark theme: change semantic tokens, not component declarations */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #111827;
+        --color-fg: #F9FAFB;
+        --color-surface: #1F2937;
+        --color-border: #6B7280;
+        --color-primary: #7DA9F7;
+        --color-danger: #FF8A9B;
+        --color-focus: #93C5FD;
+    }
+}
+
+:root:has(#tema:checked) {
+    --color-bg: #111827;
+    --color-fg: #F9FAFB;
+    --color-surface: #1F2937;
+    --color-border: #6B7280;
+    --color-primary: #7DA9F7;
+    --color-danger: #FF8A9B;
+    --color-focus: #93C5FD;
+}
+
+:root:has(#tema:checked) .tombol-tema {
+    color: var(--color-fg);
+    background: var(--color-surface);
+}
